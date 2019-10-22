@@ -15,6 +15,7 @@ function middle(array){
 		}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 // 3-Change all the numbers in the array to be multiplied by two for even indexes.
 function multipliedByTwoForEvenIndexes(array){
@@ -29,3 +30,6 @@ function multipliedByTwoForEvenIndexes(array){
 =======
 // 3-Change all the numbers in the array to be multiplied by two for even indexes.
 >>>>>>> 5351c491bef905428a1af3ea57f32fb6874d8e38
+=======
+// 3-Change all the numbers in the array to be multiplied by two for even indexes.
+>>>>>>> bc4abbbe44759eb1f72f2abcc0629fd792b435cd
