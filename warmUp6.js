@@ -5,7 +5,7 @@
  
  function range(start, end) {
 	var acc = [];
-		for ( var i = start ; i < end.length; i++){
+		for ( var i = start ; i < end; i++){
 		acc.push(i);
 	}
 	return acc;
@@ -28,7 +28,7 @@
 //
 
 function mult(n) {
- 	return reduce(range(0, n), function(x, num) {
+ 	return reduce(range(1, n), function(x, num) {
  		return x * num;
  	},n);
  
@@ -41,11 +41,13 @@ function mult(n) {
 // eg= 1 2 2 3 3 4 4 5 5 6 6 ...
 
 function repeat(n) {
-	var str = range(1, n).join('');
+	var str = range(1, n).join(' ');
+	console.log(str)
 	var str1 = '';
-	var i = 0;
-	while ( n > 0) {
-		str1 = str+' '+str;
+	var i = 2;
+	while ( i <= n) {
+		str1 = str1 + str[i]+' '+str[i];
+		console.log(str1)
 		i++; 
 	}
 	return str1;
