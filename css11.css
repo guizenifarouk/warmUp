@@ -1,0 +1,18 @@
+#b1 {
+	float: right;
+	color: blue;
+	background-color: yellow;
+}
+
+#b2 {
+	float: left;
+	color: red;
+	background-color: black;
+}
+
+#list1 {
+	float: right;
+}
+#list2 {
+	float: left;
+}
