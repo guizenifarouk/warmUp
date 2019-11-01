@@ -16,6 +16,7 @@
             C          100
             D          500
             M          1,000 
+
     
     2. Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
         Examples:
@@ -31,3 +32,50 @@
             filter_list([1,'a','b',0,15]) == [1,0,15]
             filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 */
+
+
+//2
+function camelCase(string) {
+
+	var array= string.split('');
+	var mustDelete = '-';
+	var mustDelete2 = '_';
+
+	for (var i = 0 ; i < array.length; i++ ) {
+		if(array[i] === mustDelete || array[i] === mustDelete  ) {
+			array[i+1]= array[i+1].toUpperCase();
+			array.splice(i , 1);
+		}
+	}
+			return array.join('')
+}
+// i tried to split the string to an array and then i tried to delete the '-' and making the next element of the array uppercase, and at the end i tried to transform the modified array into a string again
+
+//3
+function filter(array) {
+	var arr = [];
+	for (var i = 0 ; i < array.length ; i++) {
+		if(typeof array[i] === 'number'){
+			arr.push(array[i])
+		}
+	}
+	return arr;
+}
+//1
+function romanNumber(romanString) {
+	var romanArray = romanString.split('')
+	var result = 0;
+	var romanLetter = ['I','V','X','L','C','D','M']
+	var romanValue = [1,5,10,50,100,500,1000]
+	
+	for (var i = 0 ; i < romanLetter.length; i++) {		
+		for( var j = 0 ; j < romanArray.length ; j++) {
+			if(romanLetter[i] = romanArray[j] ) {
+				result += romanValue[i];
+			}
+		}
+	}
+	return result;
+
+}
+// still trying to solve it 
