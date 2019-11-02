@@ -19,5 +19,20 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 */
 
 var maxProfit = function(prices) {
-  // YOUR CODE HERE
+ var profit = 0;                                         // i initialised the profit at 0
+ var difference = 0;									// i initialised the difference between buy and sell to 0
+ for(var i = 0 ; i < prices.length; i++) {				//i and j ti iterate over the prices arrray and check the condiction
+ 	for(var j = 1; j < prices.length; j++) {			// diffrence is the prices of next days - prices of the day he bought 
+ 		difference = prices[j]- prices[i];				// if the difference is bigger than the old profit , prift became the difference
+ 		if(difference > profit) {
+ 			profit = difference ;
+ 		}
+
+ 	}
+ }
+ return profit;												// and return the diffrence
 };
+
+//
+
+
