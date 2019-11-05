@@ -19,6 +19,16 @@ function reverse(string) {
 	}
 	return arr.join(' ');
 }
+// i pushed and i thought we aren't allowed to use only the reverse
+ function reverse(string) {			
+ 	var result ="";
+ 	var x = ""
+ 	for(var i = string.length-1; i <= 0; i--) {				// i tired to loop from the end of the string to the beginning
+ 		x = string[i];										//then i stored the last element in a variable
+ 		result += x											//then i push to the result the last variable
+ 	}
+ 	return result;
+ }
 
 
 
