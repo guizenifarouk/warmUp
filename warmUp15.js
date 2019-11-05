@@ -4,3 +4,25 @@
 //
 //
 // Note : you can`t use any built-in functions .
+
+// function reverse(string) {
+// 	var str = string.split(' ').reverse().join(' ') ;
+
+// 	return str;
+// 	
+
+function reverse(string) {
+	var array = string.split(' ')
+	var arr = [];
+	for(var i = 0 ; i < array.length ; i++) {
+		arr.unshift(array[i])
+	}
+	return arr.join(' ');
+}
+
+
+
+
+
+
+
