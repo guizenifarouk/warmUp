@@ -30,3 +30,17 @@
 // var calculateTime = function(keyboard, word) {
     
 // };
+function calculateTime(keyboard, word ) {
+	var output = 0;
+	// var keyboard = "pqrstuvwxyzabcdefghijklmno";
+		for ( var i = 0 ; i < word.length ; i++) {
+			for(var j = 1 ; j < word.length; j++) {
+				if(keyboard.indexOf(word[i]) > keyboard.indexOf(word[j]))														// if the first letter is bigger then the next letter just add the to indexes
+					output +=	keyboard.indexOf(word[i]) + keyboard.indexOf(word[j]) ;
+			}
+				if(keyboard.indexOf(word[i]) < keyboard.indexOf(word[j])) {
+					output +=	keyboard.indexOf(word[i]) + (keyboard.indexOf(word[i])-keyboard.indexOf(word[j])) ;  // if the first letter is less then the next letter we add the first letter index to the diffrence between them
+				}
+	}
+	return output;
+}
