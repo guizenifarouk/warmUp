@@ -10,3 +10,17 @@
 
 // input   =  "aaaaaaaaaaaa"
 // result  =  "123456789101112"
+function characterOccurence(string) {
+	var array = string.split('')
+	var result ='';
+	for (var i = 0; i < array.length; i++){
+		var char ='';
+		if(array[i] == array[i+1]) {
+			char = 1 ;
+		} else {
+			char += 1;
+
+		}
+	return result += char;
+	}
+}
